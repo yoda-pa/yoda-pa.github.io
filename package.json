@@ -1,0 +1,21 @@
+{
+  "name": "yoda-pa.github.io",
+  "version": "1.0.0",
+  "description": "Wise and powerful personal assistant, available in your nearest terminal",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/styles/styles.css -o ./dist/styles.css --minify && cp ./src/index.html ./dist/index.html",
+    "watch": "tailwindcss -i ./src/styles/styles.css -o ./dist/styles.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13"
+  },
+  "dependencies": {
+    "daisyui": "^4.12.11"
+  }
+}
