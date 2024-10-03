@@ -30,6 +30,13 @@ jobs:
       - name: Build Project
         run: npm run build
 
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+          name: github-pages
+          retention-days: 1
+
   # Deploy job
   deploy:
     # Add a dependency to the build job
@@ -37,6 +44,7 @@ jobs:
 
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
+      contents: read    # to read the contents of the repository
       pages: write      # to deploy to Pages
       id-token: write   # to verify the deployment originates from an appropriate source
 
